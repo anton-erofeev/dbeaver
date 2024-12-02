@@ -184,8 +184,8 @@ public class DirectedGraphLayoutVisitor {
         }
 
         if (source instanceof Subgraph && target instanceof Subgraph) {
-            source = ((Subgraph) source).members.getNode(0);
-            target = ((Subgraph) target).members.getNode(1);
+            source = ((Subgraph) source).members.get(0);
+            target = ((Subgraph) target).members.get(1);
         }
 
         Edge e = new Edge(connectionPart, source, target);
@@ -266,7 +266,7 @@ public class DirectedGraphLayoutVisitor {
         if (edgeNodes != null && edgeNodes.size() > 1) {
             List<AbsoluteBendpoint> bends = new ArrayList<>();
             for (int i = 0; i < edgeNodes.size(); i++) {
-                Node vn = edgeNodes.getNode(i);
+                Node vn = edgeNodes.get(i);
                 int x = vn.x;
                 int y = vn.y;
                 bends.add(new AbsoluteBendpoint(x, y));

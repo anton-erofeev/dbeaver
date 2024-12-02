@@ -259,14 +259,14 @@ public class CommonUtilsTest {
   public void testToStringObject() {
     Assert.assertEquals("", CommonUtils.toString(null));
     Assert.assertEquals("a", CommonUtils.toString(new String("a")));
-    Assert.assertEquals("1", CommonUtils.toString(new Integer(1)));
+    Assert.assertEquals("1", CommonUtils.toString(Integer.valueOf(1)));
   }
 
   @Test
   public void testToStringDef() {
     Assert.assertEquals("", CommonUtils.toString(null, ""));
     Assert.assertEquals("a", CommonUtils.toString(new String("a"), ""));
-    Assert.assertEquals("1", CommonUtils.toString(new Integer(1), ""));
+    Assert.assertEquals("1", CommonUtils.toString(Integer.valueOf(1), ""));
   }
 
   @Test
